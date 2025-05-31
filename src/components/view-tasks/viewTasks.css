@@ -1,0 +1,45 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+#header {
+    align-items: center;
+    margin: 1rem;
+    display: flex;
+}
+
+#task-header {
+    display: flex;
+}
+
+#task-header button {
+    margin: 1rem;
+    color: #ffffff;
+    background-color: #030303;
+    width: 10%;
+    
+}
+
+#allTasks {
+    margin: 1rem;
+}
+
+#allTasks ul {
+    list-style-type: none;
+    display: grid;
+
+    width: 80%;
+    grid-template-columns: 40% 40% 40%;
+}
+
+#taskList {
+    display: flex;
+}
+
+#taskList li {
+    padding: 1rem;
+    border: 0.2rem solid black;
+    gap: 0.2rem;
+    margin: 0.5rem;
+}

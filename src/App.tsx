@@ -1,10 +1,11 @@
 import React from "react"
+import ViewTasks from "./components/view-tasks/ViewTasks"
 
 const App = () => {
   
   return (
     <>
-      <h1>Task Manager</h1>
+      <ViewTasks/>
     </>
   )
 }
