@@ -1,40 +1,10 @@
 import React, {useState, useEffect} from "react";
+import { useTaskContext } from "../../context/TaskContext";
 import './viewTasks.css';
 
 const ViewTasks = () => {{
 
-    interface task{
-        id: number,
-        name: string
-    }
-
-    const [tasks, setTasks] = useState<task[]>([
-        {
-            id:1,
-            name: "Task 1"
-        },
-        {
-            id:2,
-            name: "Task 2"
-        },
-        {
-            id:3,
-            name: "Task 3"
-        },
-        {
-            id:4,
-            name: "Task 4"
-        },
-        {
-            id:5,
-            name: "Task 3"
-        },
-        {
-            id:6,
-            name: "Task 6"
-        }
-    ])
-    
+    const {tasks} = useTaskContext();
 
     return(
         <>
