@@ -6,9 +6,17 @@ interface Task{
     name: string,
 }
 
+interface User {
+    id:number,
+    name: string,
+    tasksAssigned: Task[]
+}
+
 interface TaskContextType {
     tasks: Task[],
-    addTask: (name: string) => void
+    addTask: (name: string) => void,
+    users: User [],
+    addUser: (name: string) => void
 }
 
 const TaskContext = createContext<TaskContextType | undefined>(undefined);
@@ -16,6 +24,7 @@ const TaskContext = createContext<TaskContextType | undefined>(undefined);
 export const TaskProvider = ({children}:{children:ReactNode}) =>{
 
     const [tasks, setTasks] = useState<Task[]>([]);
+    const [users, setUsers] = useState<User[]>([]);
     
     const addTask = (name:string) =>{
 
@@ -28,8 +37,22 @@ export const TaskProvider = ({children}:{children:ReactNode}) =>{
         setTasks(prev => [...prev, newTask]);
         
     }
+
+    const addUser = (name:string) => {
+        let newUser: User;
+
+        newUser = {
+            id: Date.now(),
+            name,
+            tasksAssigned: []
+        }
+
+        setUsers(prev => [...prev, newUser])
+
+    }
+
     return(
-        <TaskContext.Provider value = {{tasks, addTask}}>
+        <TaskContext.Provider value = {{tasks, users, addTask, addUser}}>
             {children}
         </TaskContext.Provider>
     )
