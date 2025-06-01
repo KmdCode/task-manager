@@ -1,0 +1,10 @@
+#users-list {
+    display: flex;
+    gap: 2rem;
+}
+
+#user {
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 0.8rem
+}
