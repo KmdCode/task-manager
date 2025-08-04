@@ -10,7 +10,8 @@ const CreateTask = () => {
     const [taskName, setTaskName] = useState<string>("");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setTaskName(e.target.value);
+        const newTask = e.target.value;
+        setTaskName(newTask);
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

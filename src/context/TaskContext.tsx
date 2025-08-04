@@ -34,6 +34,9 @@ export const TaskProvider = ({children}:{children:ReactNode}) =>{
             id:Date.now(),
             name
         }
+
+        if(!newTask) return;
+
         setTasks(prev => [...prev, newTask]);
         
     }
