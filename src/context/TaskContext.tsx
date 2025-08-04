@@ -48,6 +48,7 @@ export const TaskProvider = ({children}:{children:ReactNode}) =>{
         }
 
         setUsers(prev => [...prev, newUser])
+        console.log(newUser);
 
     }
 
