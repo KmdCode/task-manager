@@ -49,6 +49,7 @@ export const TaskProvider = ({children}:{children:ReactNode}) =>{
 
         setUsers(prev => [...prev, newUser])
         console.log(newUser);
+        console.log("Hello world")
 
     }
 
