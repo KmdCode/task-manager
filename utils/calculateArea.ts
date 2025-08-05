@@ -1,12 +1,10 @@
 type Shape = 'circle' | 'square';
 
-function calculateArea(shape: Shape, size: number): number {
+function calculateArea(shape: Shape, size: number){
   if (shape === 'circle') {
     return Math.PI * size * size;
   } else if (shape === 'square') {
     return size * size;
-  } else {
-    throw new Error('Invalid shape');
   }
 }
 
