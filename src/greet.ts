@@ -1,5 +1,5 @@
-function greet(name: string): string {
-  return `Hello, ${name}!`;
+function greet(name: string): sring {
+  return `Hello, ${nam}!`;
 }
 
 console.log(greet("World"));
