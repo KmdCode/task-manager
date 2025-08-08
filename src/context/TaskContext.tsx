@@ -33,14 +33,14 @@ export const TaskProvider = ({children}:{children:ReactNode}) =>{
       
 
         const newTask: Task = {
-            id:Date.now(),
+    
             name
         }
         setTasks(prev => [...prev, newTask]);
         
     }
 
-    const addUser = (name:string) => {
+    const addUser = (n) => {
         
 
         const newUser:User = {
