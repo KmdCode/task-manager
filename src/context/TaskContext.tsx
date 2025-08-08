@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useState} from "react";
+import Ret, {createContext, useContext, useState} from "react";
 import type { ReactNode } from "react";
 
 interface Task{
@@ -10,6 +10,7 @@ interface User {
     id:number,
     name: string,
     tasksAssigned: Task[]
+    status
 }
 
 interface TaskContextType {
@@ -17,6 +18,7 @@ interface TaskContextType {
     addTask: (name: string) => void,
     users: User [],
     addUser: (name: string) => void
+    updateStatus: () => void
 }
 
 const TaskContext = createContext<TaskContextType | undefined>(undefined);
@@ -31,14 +33,14 @@ export const TaskProvider = ({children}:{children:ReactNode}) =>{
       
 
         const newTask: Task = {
-            id:Date.now(),
+    
             name
         }
         setTasks(prev => [...prev, newTask]);
         
     }
 
-    const addUser = (name:string) => {
+    const addUser = (n) => {
         
 
         const newUser:User = {
